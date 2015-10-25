@@ -46,10 +46,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Collectable\Collectable.cs" />
+     <Compile Include="Assets\Scripts\Collectable\Gold.cs" />
+     <Compile Include="Assets\Scripts\Collectable\Slow.cs" />
+     <Compile Include="Assets\Scripts\Collectable\SpeedBoost.cs" />
+     <Compile Include="Assets\Scripts\CollectableListener.cs" />
+     <Compile Include="Assets\Scripts\CollectableManager.cs" />
+     <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\DestroyerListener.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MenuControlManager.cs" />
      <Compile Include="Assets\Scripts\PlayControlManager.cs" />
+     <Compile Include="Assets\Scripts\Rotater.cs" />
+     <Compile Include="Assets\Scripts\VectorHelper.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

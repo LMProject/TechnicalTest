@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+
+PlayControlManager gets the input from keyboard and manages the swinging character.
+It apply perpendicular force vector to the swinging character, able him/her to swing.
+
+ */
+
 public class PlayControlManager : MonoBehaviour {
 	
 	private float fKeyForce = 90.361f ;
@@ -13,7 +20,7 @@ public class PlayControlManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		GameState gameState = GetComponent<Controller>().GetGameState ();
+		GameState gameState = GetComponent<GameManager>().GetGameState ();
 		
 		if (gameState == GameState.GS_Playing)
 		{ 
