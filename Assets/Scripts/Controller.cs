@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 /*
 
@@ -17,10 +18,14 @@ public class Controller : MonoBehaviour {
 		GetComponent<GameManager>().Init();
 		GetComponent<CollectableManager>().Init();
 		GetComponent<CollectableSpawner>().Init();
+
+
 	}
 
 	// Use this for initialization
 	void Start () {
+
+		DOTween.Init(false, true, LogBehaviour.ErrorsOnly);
 	
 	}
   

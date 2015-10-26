@@ -15,7 +15,7 @@ public class MenuControlManager : MonoBehaviour {
 	public GameObject arrowsImage ;
 	public GameObject scoreText ;
 	public GameObject gameOverText ;
-	public GameObject replayButton ;
+	public GameObject replayButton ; 
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,8 @@ public class MenuControlManager : MonoBehaviour {
 		playButton.SetActive (false);
 		GetComponent<GameManager>().SetGameState (GameState.GS_Playing);
 		arrowsImage.SetActive (true);
+		GetComponent<CollectableSpawner>().EnableWorldCylinderRotate (true);
+		GetComponent<CollectableSpawner>().InitBeforePlay();
 	}
 
 	public void ReplayButtonPressed ()
@@ -38,7 +40,7 @@ public class MenuControlManager : MonoBehaviour {
 		replayButton.SetActive (false);
 		gameOverText.SetActive (false);
 		GetComponent<GameManager>().SetGameState (GameState.GS_Playing);
-
+		GetComponent<CollectableSpawner>().EnableWorldCylinderRotate (true);
 	}
 
 	public void EnableArrowsImage (bool bEnable)
@@ -70,7 +72,8 @@ public class MenuControlManager : MonoBehaviour {
 		GameState gameState = gameManager.GetGameState ();
 		if (gameState == GameState.GS_Playing)
 		{
-			gameManager.AddScore (60.0f * Time.deltaTime * 1.0f);
+			float worldSpeed = GetComponent<CollectableSpawner>().GetWorldSpeed ();
+			gameManager.AddScore (60.0f * Time.deltaTime * 1.0f * worldSpeed * (1.0f / 15.0f));
 			float fScore = gameManager.GetScore ();
 			int iScoreRounded = (int)Mathf.Round(fScore);
 			scoreText.GetComponent<Text>().text = iScoreRounded + " m";

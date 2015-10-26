@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
      <Compile Include="Assets\Scripts\Collectable\Collectable.cs" />
      <Compile Include="Assets\Scripts\Collectable\Gold.cs" />
      <Compile Include="Assets\Scripts\Collectable\Slow.cs" />
@@ -57,11 +59,28 @@
      <Compile Include="Assets\Scripts\DestroyerListener.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MenuControlManager.cs" />
+     <Compile Include="Assets\Scripts\PatternSystem.cs" />
      <Compile Include="Assets\Scripts\PlayControlManager.cs" />
      <Compile Include="Assets\Scripts\Rotater.cs" />
      <Compile Include="Assets\Scripts\VectorHelper.cs" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+     <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
+     <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/leventahmetsevgili/Desktop/TechnicalTest/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/leventahmetsevgili/Desktop/TechnicalTest/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/leventahmetsevgili/Desktop/TechnicalTest/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/leventahmetsevgili/Desktop/TechnicalTest/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

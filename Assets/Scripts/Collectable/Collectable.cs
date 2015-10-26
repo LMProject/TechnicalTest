@@ -12,6 +12,7 @@ CT_SLOW decreases the speed of the world for short time interval so it is a debu
 
 public enum CollectableType
 {
+	CT_NONE = 0,
 	CT_GOLD = 1,
 	CT_SPEEDBOOST = 2,
 	CT_SLOW = 3,

@@ -42,7 +42,7 @@ public class SunParams
 {
 	public float fSunSpeed ;
 	public float fSunIncrease ;
-	public Vector3 vSunResetPosition ;
+	public static Vector3 vSunResetPosition ;
 	public float fSunMax ;
 	public float fSunMin ; 
 }
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
  
 	void Start ()
 	{
-		sunParams.vSunResetPosition = sunObject.transform.localPosition ;
+		SunParams.vSunResetPosition = sunObject.transform.localPosition ;
 	}
 
 	public void Init ()
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 		game.gameState = GameState.GS_PlayMenu;
 		game.fScore = 0.0f ;
 		sunParams.fSunIncrease = 0.0f ;
-		sunParams.fSunSpeed = -60.0f * 0.04f ;
+		sunParams.fSunSpeed = -60.0f * 0.05f ;
 		sunParams.fSunMax = 16.3f ;
 		sunParams.fSunMin = -2.5f ;
 
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
 
 	public void ResetSunPosition ()
 	{
-		sunObject.transform.localPosition = sunParams.vSunResetPosition;
+		sunObject.transform.localPosition = SunParams.vSunResetPosition;
 	}
 
 	public void AddSunIncrease (float fSunIncreaseAdd)
@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
 	{
 		GetComponent<MenuControlManager>().ActivateGameOverText (true);
 		GetComponent<MenuControlManager>().ActivateReplayButton (true);
-
+		GetComponent<CollectableSpawner>().EnableWorldCylinderRotate (false);
 	}
 
 	void Update ()
